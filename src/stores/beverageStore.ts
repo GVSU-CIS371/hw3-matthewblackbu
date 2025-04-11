@@ -6,7 +6,7 @@ import {
   BeverageType,
 } from "../types/beverage";
 import tempretures from "../data/tempretures.json";
-import db from "../firebase";
+import { db } from "../firebase";
 import {
   collection,
   getDocs,
@@ -54,7 +54,7 @@ export const useBeverageStore = defineStore("BeverageStore", {
       this.currentBase = this.bases[0] || null;
       this.currentCreamer = this.creamers[0] || null;
       this.currentSyrup = this.syrups[0] || null;
-
+      
       } catch (error) {
       console.error('Error initializing beverage store:', error);
       }
